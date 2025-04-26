@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'タロット練習場') }}</title>
+    <title>{{ config('app.name', 'Tarotique') }}</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ asset('images/favicon.svg') }}" type="image/svg+xml">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,8 +22,6 @@
     <!-- Webpackでコンパイルされたスクリプト -->
     <script src="{{ asset('js/bundle.js') }}" defer></script>
 
-    <!-- Alpine.js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,11 +30,13 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#6200EA',
-                        secondary: '#FFD700',
-                        accent: '#00BFA5',
-                        background: '#FAFAFA',
+                        primary: '#4A2C6D',
+                        secondary: '#D4AF37',
+                        accent1: '#800020',
+                        accent2: '#008080',
+                        background: '#F8F6F0',
                         text: '#212121',
+                        dark: '#0A0F1D',
                     },
                     fontFamily: {
                         sans: ['Noto Sans JP', 'sans-serif'],
@@ -46,7 +49,7 @@
     <style>
         body {
             font-family: 'Noto Sans JP', sans-serif;
-            background-color: #FAFAFA;
+            background-color: #F8F6F0;
             color: #212121;
         }
 
@@ -66,7 +69,7 @@
         }
 
         .btn-primary {
-            background-color: #6200EA;
+            background-color: #4A2C6D;
             color: white;
             padding: 0.5rem 1.5rem;
             border-radius: 4px;
@@ -75,11 +78,11 @@
         }
 
         .btn-primary:hover {
-            background-color: #5000D0;
+            background-color: #3A2255;
         }
 
         .btn-secondary {
-            background-color: #FFD700;
+            background-color: #D4AF37;
             color: #212121;
             padding: 0.5rem 1.5rem;
             border-radius: 4px;
@@ -88,7 +91,49 @@
         }
 
         .btn-secondary:hover {
-            background-color: #F0C800;
+            background-color: #C09F2F;
+        }
+
+        .btn-accent1 {
+            background-color: #800020;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-accent1:hover {
+            background-color: #6A001A;
+        }
+
+        .btn-accent2 {
+            background-color: #008080;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-accent2:hover {
+            background-color: #006666;
+        }
+
+        .tarot-card {
+            border: 2px solid #D4AF37;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .tarot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .mystical-bg {
+            background: linear-gradient(to bottom, #0A0F1D, #4A2C6D);
+            color: white;
         }
     </style>
 </head>

@@ -4,7 +4,7 @@
 <div class="bg-gray-100 py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 class="text-2xl font-bold text-gray-900 mb-6">相談者ダッシュボード</h1>
-        
+
         <!-- Points Summary -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-6">
             <div class="flex items-center justify-between">
@@ -18,14 +18,14 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Active Consultations -->
         <h2 class="text-xl font-semibold text-gray-900 mb-4">進行中の鑑定</h2>
-        
+
         @if($activeConsultations->isEmpty())
             <div class="bg-white rounded-lg shadow-md p-6 mb-6 text-center">
                 <p class="text-gray-600">現在進行中の鑑定はありません。</p>
-                <a href="{{ route('practitioners.index') }}" class="mt-4 inline-block btn-primary">
+                <a href="{{ route('practitioners.index') }}" class="mt-4 btn-primary flex items-center">
                     <span class="material-icons mr-1">search</span>
                     鑑定師を探す
                 </a>
@@ -41,7 +41,7 @@
                                     鑑定師: {{ $consultation->practitioner->name }}
                                 </p>
                             </div>
-                            <span class="px-2 py-1 text-xs rounded-full 
+                            <span class="px-2 py-1 text-xs rounded-full
                                 @if($consultation->status === 'pending') bg-yellow-100 text-yellow-800
                                 @elseif($consultation->status === 'accepted') bg-blue-100 text-blue-800
                                 @elseif($consultation->status === 'in_progress') bg-green-100 text-green-800
@@ -52,9 +52,9 @@
                                 @endif
                             </span>
                         </div>
-                        
+
                         <p class="text-gray-600 mb-4 line-clamp-2">{{ $consultation->question }}</p>
-                        
+
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500">{{ $consultation->created_at->format('Y/m/d') }}</span>
                             <div>
@@ -71,17 +71,17 @@
                     </div>
                 @endforeach
             </div>
-            
+
             <div class="text-center mb-8">
                 <a href="{{ route('consultations.index') }}" class="text-primary hover:underline">
                     すべての鑑定を見る
                 </a>
             </div>
         @endif
-        
+
         <!-- Recommended Practitioners -->
         <h2 class="text-xl font-semibold text-gray-900 mb-4">おすすめの鑑定師</h2>
-        
+
         @if($recommendedPractitioners->isEmpty())
             <div class="bg-white rounded-lg shadow-md p-6 mb-6 text-center">
                 <p class="text-gray-600">現在おすすめの鑑定師はいません。</p>
@@ -105,7 +105,7 @@
                                 <span class="ml-2 text-sm text-gray-500">({{ $practitioner->review_count ?? 0 }}件)</span>
                             </div>
                         </div>
-                        
+
                         <div class="text-center">
                             <a href="{{ route('practitioners.show', $practitioner) }}" class="btn-primary inline-block">
                                 プロフィールを見る
@@ -114,19 +114,19 @@
                     </div>
                 @endforeach
             </div>
-            
+
             <div class="text-center">
-                <a href="{{ route('practitioners.index') }}" class="btn-secondary inline-block">
+                <a href="{{ route('practitioners.index') }}" class="btn-secondary inline-block flex items-center">
                     <span class="material-icons mr-1">search</span>
                     鑑定師をもっと探す
                 </a>
             </div>
         @endif
-        
+
         <!-- Completed Consultations -->
         @if(!$completedConsultations->isEmpty())
             <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-4">完了した鑑定</h2>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 @foreach($completedConsultations as $consultation)
                     <div class="bg-white rounded-lg shadow-md p-6">
@@ -141,9 +141,9 @@
                                 完了
                             </span>
                         </div>
-                        
+
                         <p class="text-gray-600 mb-4 line-clamp-2">{{ $consultation->question }}</p>
-                        
+
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500">{{ $consultation->completed_at->format('Y/m/d') }}</span>
                             <div>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <!-- 背景の星空効果 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0F1D" />
+      <stop offset="100%" stop-color="#4A2C6D" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- タロットカードの形 -->
+  <rect x="10" y="5" width="40" height="50" rx="3" ry="3" fill="url(#bgGradient)" stroke="#D4AF37" stroke-width="1.5" />
+  
+  <!-- カード内の神秘的な模様 -->
+  <circle cx="30" cy="20" r="8" fill="none" stroke="#D4AF37" stroke-width="1" />
+  <path d="M30 12 L30 28 M22 20 L38 20" stroke="#D4AF37" stroke-width="1" />
+  <circle cx="30" cy="20" r="3" fill="#D4AF37" />
+  
+  <!-- 月のシンボル -->
+  <path d="M25 40 Q30 35, 35 40 Q30 45, 25 40 Z" fill="#D4AF37" />
+  
+  <!-- テキスト部分 -->
+  <text x="60" y="35" font-family="'Times New Roman', serif" font-size="24" font-weight="bold" fill="#D4AF37" filter="url(#glow)">Tarotique</text>
+  
+  <!-- 装飾的な星 -->
+  <path d="M55 20 L57 25 L62 25 L58 28 L60 33 L55 30 L50 33 L52 28 L48 25 L53 25 Z" fill="#D4AF37" opacity="0.7" />
+  <path d="M170 15 L172 20 L177 20 L173 23 L175 28 L170 25 L165 28 L167 23 L163 20 L168 20 Z" fill="#D4AF37" opacity="0.5" />
+  <path d="M180 40 L181 43 L184 43 L182 45 L183 48 L180 46 L177 48 L178 45 L176 43 L179 43 Z" fill="#D4AF37" opacity="0.6" />
+  
+  <!-- 小さな星の点々 -->
+  <circle cx="65" cy="15" r="1" fill="#D4AF37" opacity="0.8" />
+  <circle cx="85" cy="12" r="0.8" fill="#D4AF37" opacity="0.7" />
+  <circle cx="105" cy="18" r="0.6" fill="#D4AF37" opacity="0.9" />
+  <circle cx="125" cy="14" r="0.7" fill="#D4AF37" opacity="0.8" />
+  <circle cx="145" cy="16" r="0.9" fill="#D4AF37" opacity="0.7" />
+  <circle cx="75" cy="45" r="0.8" fill="#D4AF37" opacity="0.6" />
+  <circle cx="95" cy="48" r="0.7" fill="#D4AF37" opacity="0.8" />
+  <circle cx="115" cy="46" r="0.9" fill="#D4AF37" opacity="0.7" />
+  <circle cx="135" cy="44" r="0.6" fill="#D4AF37" opacity="0.9" />
+  <circle cx="155" cy="47" r="0.8" fill="#D4AF37" opacity="0.8" />
+</svg>

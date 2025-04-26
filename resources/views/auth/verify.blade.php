@@ -1,25 +1,33 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="flex justify-center">
+        <div class="w-full max-w-md">
+            <div class="material-card overflow-hidden">
+                <div class="bg-primary text-white px-6 py-4 text-lg font-medium">
+                    {{ __('メールアドレスの確認') }}
+                </div>
 
-                <div class="card-body">
+                <div class="p-6 bg-white">
                     @if (session('resent'))
-                        <div class="alert alert-success" role="alert">
-                            {{ __('A fresh verification link has been sent to your email address.') }}
+                        <div class="mb-4 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded">
+                            {{ __('新しい確認リンクがメールアドレスに送信されました。') }}
                         </div>
                     @endif
 
-                    {{ __('Before proceeding, please check your email for a verification link.') }}
-                    {{ __('If you did not receive the email') }},
-                    <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
-                        @csrf
-                        <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>.
-                    </form>
+                    <p class="mb-4">
+                        {{ __('続行する前に、確認リンクがあるかメールをご確認ください。') }}
+                    </p>
+                    <p class="mb-4">
+                        {{ __('メールが届いていない場合は') }}、
+                        <form class="inline" method="POST" action="{{ route('verification.resend') }}">
+                            @csrf
+                            <button type="submit" class="text-primary hover:underline">
+                                {{ __('こちらをクリックして再送信してください') }}
+                            </button>。
+                        </form>
+                    </p>
                 </div>
             </div>
         </div>

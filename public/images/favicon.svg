@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0F1D" />
+      <stop offset="100%" stop-color="#4A2C6D" />
+    </linearGradient>
+  </defs>
+  
+  <!-- タロットカードの形 -->
+  <rect x="2" y="2" width="28" height="28" rx="3" ry="3" fill="url(#bgGradient)" stroke="#D4AF37" stroke-width="1" />
+  
+  <!-- カード内の神秘的な模様 -->
+  <circle cx="16" cy="12" r="6" fill="none" stroke="#D4AF37" stroke-width="1" />
+  <path d="M16 6 L16 18 M10 12 L22 12" stroke="#D4AF37" stroke-width="1" />
+  <circle cx="16" cy="12" r="2" fill="#D4AF37" />
+  
+  <!-- 月のシンボル -->
+  <path d="M12 22 Q16 18, 20 22 Q16 26, 12 22 Z" fill="#D4AF37" />
+  
+  <!-- 小さな星 -->
+  <path d="M24 6 L25 8 L27 8 L25.5 9.5 L26 12 L24 10.5 L22 12 L22.5 9.5 L21 8 L23 8 Z" fill="#D4AF37" opacity="0.8" />
+</svg>

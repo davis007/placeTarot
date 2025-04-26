@@ -17,6 +17,9 @@ use App\Http\Controllers\Admin\BadgeController;
 
 // 認証不要のルート
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', function() {
+    return redirect()->route('dashboard');
+});
 
 // 認証関連
 Auth::routes();
@@ -24,6 +27,7 @@ Auth::routes();
 // Google認証
 Route::get('auth/google', [GoogleAuthController::class, 'redirectToGoogle'])->name('auth.google');
 Route::get('auth/google/callback', [GoogleAuthController::class, 'handleGoogleCallback']);
+Route::post('auth/google/select-user-type', [GoogleAuthController::class, 'selectUserType'])->name('auth.google.select-user-type');
 
 // 認証が必要なルート
 Route::middleware(['auth'])->group(function () {
