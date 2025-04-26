@@ -1,0 +1,22 @@
+<?php
+
+return [
+    // 認証関連
+    'Login' => 'ログイン',
+    'Register' => '登録',
+    'Email Address' => 'メールアドレス',
+    'Password' => 'パスワード',
+    'Confirm Password' => 'パスワード（確認）',
+    'Name' => '名前',
+    'Remember Me' => 'ログイン状態を保存',
+    'Forgot Your Password?' => 'パスワードをお忘れですか？',
+    'Reset Password' => 'パスワードリセット',
+    'Send Password Reset Link' => 'パスワードリセットリンクを送信',
+    'Confirm Password' => 'パスワード確認',
+    'Please confirm your password before continuing.' => '続行する前にパスワードを確認してください。',
+    'Verify Your Email Address' => 'メールアドレスを確認',
+    'A fresh verification link has been sent to your email address.' => '新しい確認リンクがあなたのメールアドレスに送信されました。',
+    'Before proceeding, please check your email for a verification link.' => '続行する前に、確認リンクがあるかメールをチェックしてください。',
+    'If you did not receive the email' => 'メールが届かない場合',
+    'click here to request another' => 'こちらをクリックして再リクエスト',
+];
